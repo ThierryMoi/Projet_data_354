@@ -1,12 +1,9 @@
 from fastapi import FastAPI
 from Extraction.stockage import *
-import Extraction.globalParamettre
-from pydantic import BaseModel
-from fastapi_amis_admin.admin.settings import Settings
-from fastapi_amis_admin.admin.site import AdminSite
-from datetime import date
-from fastapi_scheduler import SchedulerAdmin
 from Traitement.connecteur import *
+import Extraction.globalParamettre
+from fastapi_amis_admin.admin import *
+from fastapi_scheduler import SchedulerAdmin
 
 
 # Instanciation de l'API

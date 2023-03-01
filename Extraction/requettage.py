@@ -1,7 +1,8 @@
-from multiprocessing import Pool, cpu_count
 import Extraction.globalParamettre
-from datetime import date, datetime
+from datetime import  datetime
 from pynytimes import NYTAPI
+from multiprocessing import Pool, cpu_count
+
 
 # Cette fonction à pour but de recuperer les articles d'un sujet particulier
 # sur une période données
