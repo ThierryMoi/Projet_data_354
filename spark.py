@@ -27,8 +27,8 @@ spark = SparkSession.builder.appName("owidDataAnalyzing").getOrCreate()
 def get_data():
     logging.info(f"executed at  {dt.datetime.now()}")
     logging.info(f"Reading {FILEURL}")
-    val sourceBucket = "airquino/raw"
-    val inputPath = f"s3a://$sourceBucket/2023-12-15T11:00:00+00:00.json"
+    sourceBucket = "airquino/raw"
+    inputPath = f"s3a://$sourceBucket/2023-12-15T11:00:00+00:00.json"
     df = spark.read.json(inputPath, header=True, inferSchema= True)
     logging.info(f"Reading ok")
     return df 
