@@ -8,12 +8,6 @@ from minio import Minio
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-with open("/opt/spark/examples/jars/config.json", "r") as f:
-    config = json.load(f)
-
-FILEURL = config["FILEURL"]
-# DRIVER_PATH = os.environ["driver_path"]
-
 #PG_IP = Variable.get("pg_ip")
 
 #DRIVER_PATH = Variable.get("driver_path")
@@ -26,7 +20,6 @@ spark = SparkSession.builder.appName("owidDataAnalyzing").getOrCreate()
 
 def get_data():
     logging.info(f"executed at  {dt.datetime.now()}")
-    logging.info(f"Reading {FILEURL}")
     sourceBucket = "airquino/raw"
     inputPath = f"s3a://$sourceBucket/2023-12-15T11:00:00+00:00.json"
     df = spark.read.json(inputPath, header=True, inferSchema= True)
