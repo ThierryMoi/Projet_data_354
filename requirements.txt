@@ -9,3 +9,4 @@ requests==2.26.0
 urllib3==1.26.7
 uvicorn==0.18.2
 
+certifi>=2023.7.22 # not directly required, pinned by Snyk to avoid a vulnerability
