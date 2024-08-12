@@ -1,7 +1,7 @@
 fastapi-scheduler==0.0.3
 fastapi==
 joblib==1.1.0
-nltk==3.8.1
+nltk==3.8.2
 numpy==1.22.3
 pandas==1.4.1
 pynytimes==0.9.0
